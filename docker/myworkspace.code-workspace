@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+			"path": "todo-list-app"
+		},
+		{
+			"path": "getting-started-todo-app"
+		},
+		{
+			"path": "helloworld-demo-node"
+		},
+		{
+			"path": "spring-boot-docker"
+		},
+		{
+			"path": "getting-started-app"
+		},
+		{
+			"path": "../ltc/Virtuoso-1"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {}
+}
