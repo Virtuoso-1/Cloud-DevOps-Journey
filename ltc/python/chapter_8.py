@@ -83,6 +83,7 @@ def make_album(artist_name, album_title, no_of_songs=None):
         album['songs'] = no_of_songs
     return album
 
+"""
 while True:
     print("Please enter album's title and artist")
     print("Enter 'q' to quit at ant time")
@@ -97,6 +98,80 @@ while True:
 
     album = make_album(artist, title)
     print(f"{album}\n")
+
+while loop commented out"""
+    
+#Passing a list as argument to to functions - Try it yourself 8.9 to 8.11
+#8.9 - Messages
+
+people = ['Sam', 'Dan', 'Hannah', 'Josh']
+
+def show_messages(names):
+    #Print a simple message to each user in the list
+    for name in names:
+        msg = f"Hello, {name}."
+        print(msg)
+
+#Call the function 
+show_messages(people)
+
+#8.10 - Sending Messages
+def send_messages(names):
+    #Print simple messages and store the printed messages to a new list
+    sent_messages = []
+    for name in names:
+        msg= f"Hello, {name}."
+        sent_messages.append(msg)
+        print(msg)
+
+    print("\nThis is the list of the sent messages:")
+    print(sent_messages)
+
+#Call the function 
+send_messages(people)
+
+
+#8.11 - Archived Messages
+
+
+
+#Arbitary no of arguments, Positional & Arbitary argument, Arbitary Keyword Arguments
+#Try it yourself 8.12 to 8.14 - Sandwiches
+def sandwiches_toppings(*toppings):
+    #Accept and print any no of toppings wanted by a user
+    print(f"\n I want a sandwich with the following toppings: ")
+    for topping in toppings:
+        print(f"- {topping}")
+
+
+sandwiches_toppings('vanilla')
+sandwiches_toppings('chocolate', 'strawberry', 'vanilla')
+print("\n")
+
+#8.15 - User Profile 
+def build_profile(f_name, l_name, **kwargs):
+    """A function that helps build a dictioonary containing
+    user profile based on the details provided"""
+    kwargs['first_name'] = f_name
+    kwargs['last_name'] = l_name
+    return kwargs
+
+user_profile = build_profile('Olamide', 'Olubode', location='Ibadan',
+                               age=24, level='500lvl')
+print(user_profile)
+
+#8.14 - Cars 
+def car_info(manufacturer_name, model, **kwargs):
+    """Store information about a car in a dictionary"""
+    kwargs['manufacturer'] = manufacturer_name
+    kwargs['model'] = model 
+    return kwargs
+
+
+car=car_info('Toyota', 'Venza', color='red', year=2015, 
+             engine ='V6')
+
+print(car)
 
 
 
