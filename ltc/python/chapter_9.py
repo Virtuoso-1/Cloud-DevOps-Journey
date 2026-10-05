@@ -292,6 +292,8 @@ class ElectricCar(Car):
 
 car_1 = ElectricCar('Toyota', 'Camry', '2026')
 car_1.battery.get_range()
+print("\n")
+
 
 
 #Python Standard library - Try it yourself 9.13 to 9.16
@@ -303,10 +305,62 @@ class Die:
         self.sides = sides
 
     def roll_die(self):
-        print(randint(1,6))
+        return randint(1, self.sides)
 
-6-sided = Die(6)
-6-sided.roll_die()
+
+die_6 = Die()
+i = 0 
+die_rolling_10 = []
+
+while i < 10:
+    roll = die_6.roll_die()
+    die_rolling_10.append(roll)
+    i += 1
+
+print(f"\nRandom rolling of a 6-sided die 10 times: {die_rolling_10}")
+
+die_10 = Die(10)
+i = 0 
+die_rolling_20 = []
+
+while i < 20:
+    roll = die_10.roll_die()
+    die_rolling_20.append(roll)
+    i += 1
+
+print(f"\nRandom rolling of a 10-sided die 20 times: {die_rolling_20}\n")
+
+
+#9.14 Lottery 
+series_num_and_letter = (2, 6, 4, 3, 't', 'y', 'w', 's', 'h', 'x', 10)
+
+from random import choice
+
+i = 0
+while i < 4:
+    lottery = choice(series_num_and_letter)
+    print(lottery)
+    i += 1
+
+    if lottery == 4:
+        print("You ticket matches the expected number 4, you won the prize")
+    else:
+        print("Input $5 coin and try your luck again\n") 
+
+
+#9.15 - Lottery Analysis 
+my_ticket = (2, 6, 4, 3, 't', 'y', 'w', 's', 'h', 'x', 10)
+polling_number = True
+
+while polling_number:
+    lottery = choice(my_ticket)
+    print(lottery)
+
+    if lottery == 10:
+        print("You have won the prize")
+        polling_number = False
+    else:
+        print("Continue running the number until your ticket wins")
 
 
 
