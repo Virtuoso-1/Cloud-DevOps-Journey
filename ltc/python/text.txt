@@ -1,0 +1,9 @@
+
+So far I've learnt about files and how to read its content.
+I've also learnt about classes, subclass and how inheritance works.
+Learned how to work with different types of data.
+Handled repeated tasks by creating functions.
+Worked with loops: if loop, for loop, while loop. 
+And many other functions. 
+
+These are just few details about what I have learnt from Python. 
